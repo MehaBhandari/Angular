@@ -1,2 +1,9 @@
+(function() {
+    var empModule = angular.module("empModule", ["detailModule"])
 
-alert("Meha");
+    empModule.controller("empBasicController", function($scope, detailModuleFactory, employerDetailService){
+        $scope.name = detailModuleFactory.name;
+        $scope.age = detailModuleFactory.age;
+    });
+
+})();
