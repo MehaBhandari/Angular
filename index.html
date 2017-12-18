@@ -2,28 +2,14 @@
 
 <html>
     <head>
+        <title>Task Management</title>
         <script src="./scripts/angular.js"></script>
-        <script src="./scripts/detailModule.js"></script>
-        <script src="./scripts/Employee.js"></script>
-    </head>
-    <body ng-app="empModule">
-        <div ng-controller="detailModuleController">
-            <div ng-controller="empBasicController">
-                Hello <b>{{name}}</b> <br><br>
-                ng-Bind Usage Name is: <span ng-bind="name"></span><br><br>
-                Your age is {{age}} <br><br>
-                Your address is {{address}} <br><br>
-                Your telephoe number is {{tel}} <br><br>
-            </div>
+        <script src="./scripts/taskdetail.js"></script>
 
-            <h2>Your Previous Employers:</h2><br><br>
-            <div ng-repeat="prevEmp in previousEmployers" style="height: 150px; width:400px; border: 1px solid red; margin: 10px; padding: 10px;">
-                Company Name: <label ng-bind="prevEmp.name"></label><br><br>
-                Duration of Stay: {{prevEmp.duration}}<br><br>
-                Company number: {{$index+1}} <br><br>
-                <input type="button" value="Click Me" ng-click="getSelectedCompanyCount($index+1)"> <br><br>
-            </div>
-        </div>
-        
+    </head>
+    <body ng-app="taskManagement">
+        <div>
+              {{2+5}}      
+        </div>        
     </body>
 </html>
