@@ -8,8 +8,16 @@
 
     </head>
     <body ng-app="taskManagement">
-        <div>
-              {{2+5}}      
+        <div ng-controller="taskManagementController">
+            <h2>{{heading}}</h2>
+            <div ng-repeat="task in taskArray" style=" height: 120px; width: 400px; margin: 10px; border: 1px solid red">
+                Task ID: {{task.id}} <br><br>
+                Task Creation Date: {{task.creationDate}}<br><br>
+
+                <input type="button" value="Update" ng-click="updateFunction()">
+                <input type="button" value="Delete" ng-click="deleteFunction()">
+
+            </div>           
         </div>        
     </body>
 </html>
