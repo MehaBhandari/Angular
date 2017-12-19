@@ -11,6 +11,10 @@
             
             alert("Value deleted");
         };
+
+        $scope.searchFunction = function() {
+            alert("clicked");
+        }
     });
 
     taskManagement.factory("taskManagementFactory", function() {

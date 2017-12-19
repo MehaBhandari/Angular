@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/taskdetail.js"></script>
+    </head>
+    <body ng-app="taskManagement">
+        <div ng-controller="taskManagementController">
+            Enter the Task Id: <br><br>
+            <input type="text" ng-model="searchedString"> <br><br>
+            <input type="button" value="Search" ng-click="searchFunction()">
+
+            <div ng-if="{{task.id}}==searchedString" style=" height: 120px; width: 400px; margin: 10px; border: 1px solid red">
+                    Task ID: {{task.id}} <br><br>
+                    Task Creation Date: {{task.creationDate}}<br><br>
+
+        </div>
+       
+    </body>
+</html>
