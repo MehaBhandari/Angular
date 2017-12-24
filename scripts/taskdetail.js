@@ -8,7 +8,6 @@
             alert("Value updated");
         };
         $scope.deleteFunction = function(){
-            
             alert("Value deleted");
         };
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/learnDirective.js"></script>
+        <script></script>
+    </head>
+    <body>
+        <div ng-app="learnDirective" ng-controller="learnDirectiveController">
+            This is from Main controller i.e. "learnDirectiveController"
+            <br><br>
+            Name is: {{name}}
+            <br><br>
+            -----------------------------------------------
+            <br><br>
+            This is from "Demo 1" which is using value from controller
+            <br><br>
+            <demo1-directive></demo1-directive>
+            <br><br>
+            -----------------------------------------------
+            <br><br>
+            This is from "random Demo" where change of value in controller is reflected in directive
+            <br><br>
+            This one is of parent Controller <br><br>
+            <input type="text" ng-model="randomText"><br><br>
+            This one is of "random Directive" <br><br>
+            <random-directive></random-directive>
+            <br><br>
+            -----------------------------------------------
+            <br><br>
+
+
+        </div>
+
+    </body>
+</html>
