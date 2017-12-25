@@ -4,6 +4,7 @@
         $scope.name = "Meha";
         $scope.age = 25;
         $scope.randomText = "Hey beautiful";
+        $scope.demo5text = "Demo5 Text";
         $scope.emp = {
             name: "Mayank",
             age: 29
@@ -31,7 +32,7 @@
         return {
             template: `Hi there now the following is transcluded text: <br><br>
                         <ng-transclude></ng-transclude> `,
-            transclude: "true"
+            transclude: true
             
         };
     });
@@ -39,8 +40,29 @@
         return {
             template: `Using interpolation in transclude: <br><br>
                         Here it is: <b>{{twoWayBindedText}}</b>`,
-            transclude: "true",
+            transclude: true,
+        };
+    });
+    learnDirective.directive("demo5Directive", function() {
+        return {
+            template: `Hi there using <b>Directive scope</b><br><br>
+                        Primitive: <br><br>
+                        <input type="text" ng-model="demo5text"><br><br>
+                        Secondary:<br><br>
+                        <input type="text" ng-model="emp.name">`,
+            scope: false
+
         }
     });
-
+    learnDirective.directive("demo6Directive", function() {
+        return {
+            template: `Here we will use <b>Directive Scope</b> as true 
+                        Primitive: <br><br>
+                        <input type="text" ng-model="demo5text"><br><br>
+                        Secondary:<br><br>
+                        <input type="text" ng-model="emp.name">
+                        `,
+                        scope: true
+        };
+    });
 })();
