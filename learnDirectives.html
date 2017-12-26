@@ -6,66 +6,98 @@
         <script></script>
     </head>
     <body>
-        <div ng-app="learnDirective" ng-controller="learnDirectiveController">
-            This is from Main controller i.e. "learnDirectiveController"
-            <br><br>
-            Name is: {{name}}
-            <br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 1" which is using value from controller
-            <br><br>
-            <demo1-directive></demo1-directive>
-            <br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "random Demo" where change of value in controller is reflected in directive
-            <br><br>
-            This one is of parent Controller <br><br>
-            <input type="text" ng-model="randomText"><br><br>
-            This one is of "random Directive" <br><br>
-            <random-directive></random-directive>
-            <br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 2" which is using value from <b>Root Scope</b><br><br>
-            <demo2-directive></demo2-directive><br><br>
-            <input type="text" ng-model="rootScopeText"><br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 3" which is using <b>Transclude</b> <br><br>
-            <demo3-directive><b>This is the transcluded text</b></demo3-directive>
-            <br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 4" which is using interpolation in transcluded text: <br><br>
-            <input type="text" ng-model="twoWayBindedText"><br><br>
-            <demo4-directive></demo4-directive>
-            <br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 5" which is using <b>Parent Scope</b>as false <br><br>
-            Primitive: <br><br>
-            <input type="text" ng-model="demo5text"><br><br>
-            Secondary:<br><br>
-            <input type="text" ng-model="emp.name">
-            <br><br>
-            {{emp.name}}<br><br>
+        <div ng-app="learnDirective" >
+            <div ng-controller="learnDirectiveController">
+                    This is from Main controller i.e. "learnDirectiveController"
+                    <br><br>
+                    Name is: {{name}}
+                    <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 1" which is using value from controller
+                    <br><br>
+                    <demo1-directive></demo1-directive>
+                    <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "random Demo" where change of value in controller is reflected in directive
+                    <br><br>
+                    This one is of parent Controller <br><br>
+                    <input type="text" ng-model="randomText"><br><br>
+                    This one is of "random Directive" <br><br>
+                    <random-directive></random-directive>
+                    <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 2" which is using value from <b>Root Scope</b><br><br>
+                    <demo2-directive></demo2-directive><br><br>
+                    <input type="text" ng-model="rootScopeText"><br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 3" which is using <b>Transclude</b> <br><br>
+                    <demo3-directive><b>This is the transcluded text</b></demo3-directive>
+                    <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 4" which is using interpolation in transcluded text: <br><br>
+                    <input type="text" ng-model="twoWayBindedText"><br><br>
+                    <demo4-directive></demo4-directive>
+                    <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 5" which is using <b>Parent Scope</b>as false <br><br>
+                    Primitive: <br><br>
+                    <input type="text" ng-model="demo5text"><br><br>
+                    Secondary:<br><br>
+                    <input type="text" ng-model="emp.name">
+                    <br><br>
+                    {{emp.name}}<br><br>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxx<br><br>
+                    <demo5-directive></demo5-directive><br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is from "Demo 6" which is using <b>Parent Scope</b>as true <br><br>
+                    Primitive: <br><br>
+                    <input type="text" ng-model="demo5text"><br><br>
+                    Secondary:<br><br>
+                    <input type="text" ng-model="emp.name">
+                    <br><br>
+                    {{emp.name}}<br><br>
+                    xxxxxxxxxxxxxxxxxxxxxxxx<br><br>
+                    <demo6-directive></demo6-directive><br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    This is "Demo 7" which is using its <b>controller:</b><br><br> 
+                    <demo7-directive></demo7-directive><br><br>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxx<br><b.02r>
+                    Outer-controller: {{name}} <br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    "Demo 8" Directive's controller using <b>root-scope:</b><br><br>
+                    <demo8-directive></demo8-directive><br><br>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxx<br><br>
+                    Demo-8 outside directive: <br><br>
+                    Name: {{name}}<br><br>
+                    Place: {{place}}<br><br>
+                    -----------------------------------------------
+                    <br><br>
+                    <demo10-directive button-clicked="buttonClicked()"></demo10-directive>
+                    <demo10-directive button-clicked="otherButtonClicked()"></demo10-directive>
+            </div>
+            -----------------------------------------------<br><br>
+            ----------------xxxxxxxxxxxxxxxxxx-------------<br><br>
+            <h3>Outside Parent Controller: </h3>
+            "Demo 8" Directive's controller using <b>root-scope:</b><br><br>
+            <demo8-directive></demo8-directive><br><br>
             xxxxxxxxxxxxxxxxxxxxxxxxxxx<br><br>
-            <demo5-directive></demo5-directive><br><br>
-            -----------------------------------------------
-            <br><br>
-            This is from "Demo 6" which is using <b>Parent Scope</b>as true <br><br>
-            Primitive: <br><br>
-            <input type="text" ng-model="demo5text"><br><br>
-            Secondary:<br><br>
-            <input type="text" ng-model="emp.name">
-            <br><br>
-            {{emp.name}}<br><br>
-            xxxxxxxxxxxxxxxxxxxxxxxx<br><br>
-            <demo6-directive></demo6-directive><br><br>
+            Demo-8 outside directive: <br><br>
+            Name: {{name}}<br><br>
+            Place: {{place}}<br><br>
+            ----------------xxxxxxxxxxxxxxxxxx-------------<br><br>
+            -----------------------------------------------<br><br>
+
+            
 
         </div>
-
     </body>
-</html>
+</html> 

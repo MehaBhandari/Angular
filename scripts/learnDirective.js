@@ -1,8 +1,8 @@
 (function(){
     var learnDirective = angular.module("learnDirective", []);
     learnDirective.controller("learnDirectiveController", function($scope,$rootScope){
-        $scope.name = "Meha";
-        $scope.age = 25;
+        $scope.name = "Zoya";
+        $scope.age = 118;
         $scope.randomText = "Hey beautiful";
         $scope.demo5text = "Demo5 Text";
         $scope.emp = {
@@ -11,6 +11,12 @@
         };
         $rootScope.Company = "GlobalLogic";
         $rootScope.rootScopeText = "Change RootScope here";
+        $scope.buttonClicked = function() {
+            alert("Hi All");
+        }
+        $scope.otherButtonClicked = function() {
+            alert("Hello All");
+        }
     });
     learnDirective.directive("demo1Directive", function() {
         return{
@@ -65,4 +71,58 @@
                         scope: true
         };
     });
+
+    learnDirective.directive("demo7Directive", function() {
+        return {
+            template: `Here is the controller <br><br>
+                        Directive's controller: {{name}}`,
+            restrict: "E",
+            controller: function($scope){
+                $scope.name = "Meha",
+                $scope.age = 25,
+                $scope.designation = "Developer"
+            },
+            scope: true
+        };
+    });
+
+    learnDirective.directive("demo8Directive", function() {
+        return {
+            template: `Hi This is demo 8 <br><br>
+                        Demo-8 inside directive: <br><br>
+                        Name: {{name}}<br><br>
+                        Place: {{place}}<br><br>`,
+            restrict: "E",
+            controller: function($rootScope) {
+                $rootScope.place = "New Jersy";
+                $rootScope.name = "Monu Gupta";
+            },
+            scope: true
+        };
+    });
+    learnDirective.directive("demo9Directive", function() {
+        return {
+            template: `Hi This is demo 9 <br><br>
+                        Demo-8 inside directive: <br><br>
+                        Name: {{name}}<br><br>
+                        Place: {{place}}<br><br>`,
+            restrict: "E",
+            controller: function($scope) {
+                $scope.place = "New Jersy";
+                $scope.name = "Monu Gupta";
+            },
+            scope: true
+        };
+    });
+
+    learnDirective.directive("demo10Directive", function() {
+        return {
+            template: `<input type="button" value="Click Me" ng-click="buttonClicked()" />`,
+            restrict: "E",
+            scope: {
+                buttonClicked: '&'
+            }
+        };
+    });
+
 })();
