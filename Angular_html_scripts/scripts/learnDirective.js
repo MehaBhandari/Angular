@@ -17,6 +17,12 @@
         $scope.otherButtonClicked = function() {
             alert("Hello All");
         }
+        $scope.createButton = function() {
+            var btn = document.createElement("Button");
+            var t = document.createTextNode("I am formed");
+            btn.appendChild(t);
+            document.body.appendChild(btn);
+        }
     });
     learnDirective.directive("demo1Directive", function() {
         return{
@@ -124,5 +130,15 @@
             }
         };
     });
+
+    learnDirective.directive("demo11Directive", function() {
+        return {
+            template: `This is isolated scope: 
+                        <input type="button" value="CLICK ME" ng-click="clickFunction()"/>`,
+            scope: { 
+                clickFunction: "&"
+            }
+        };
+    }); 
 
 })();

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/link.js"></script>
+    </head>
+    <body ng-app="watchModule">
+        <div ng-controller="watchController">
+            <input type="text" ng-model="text" ng-change="changeFunc()"> <br><br>
+            The text field contains: <br><br>
+            {{text}}<br><br>
+            Changes: {{count}}
+            <br><br><br><br>
+            <link-directive></link-directive><br><br>
+
+            <div append-directive="data">
+                <p>Hello All</p>    
+            </div><br><br>
+        </div>
+        <div attribute-directive="Mehak" my-attr="Mayank">
+            <p>This is new component</p>
+        </div>
+
+        
+    </body>
+</html>

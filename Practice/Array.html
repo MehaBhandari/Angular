@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../Angular_html_scripts/scripts/angular.js"></script>
+        <script src="./Array.js"></script>
+    </head>
+    <body ng-app="arrayModule">
+        <div ng-controller="arrayController">                
+            Enter name to be added: <br><br>
+            <input type="text" ng-model="name" /><br><br>
+            Enter age to be added: <br><br>
+            <input type="text" ng-model="age" /><br><br>
+            <input type="button" value="Click to add" ng-click="addArray()" ng-disabled="isButtonDisabled"/><br><br>
+            <input type="button" value="Extract Data" ng-click="extractData()" /><br><br>
+            <div ng-if="empArray.length > 0">
+                <h3>New array is: </h3>
+                <div ng-repeat="emp in empArray" style="border: 1px solid red; padding: 5px; margin: 5px">
+                    <label>Name: </label> <span ng-bind="emp.name"></span><br><br>
+                    <label>Age: </label><span ng-bind="emp.age"></span><br><br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

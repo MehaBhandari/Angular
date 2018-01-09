@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/watch_Practice.js"></script>
+    </head>
+    <body ng-app="watchModule">
+        <div ng-controller="watchController">
+            Name is: {{name}}<br><br>
+            <input type="text" ng-model="name" ng-change="changedVal()"/><br><br>
+
+            <input type="text" ng-model="name2" /><br><br>
+
+            Age of {{Emp.name}} is: {{Emp.age}}<br><br>
+            <input type="button" value="Click me to increment Age" ng-click="addAge()"><br><br>
+            <input type="button" value="Change Employee" ng-click="buttonClicked()"/> <br><br>
+
+        </div>
+        
+    <!--    <div ng-controller="watchController2">
+            Name is: 
+            <input type="text" ng-model="name"/><br><br>
+            Age is: {{age}}<br><br>
+            Designation is: {{desig}}<br><br>
+
+            <input type="button" ng-click="callFunction()" value="Click Changes" />
+            <br><br><br>
+                     
+        </div> -->
+
+        <div ng-controller="watchController3">
+            <h2>Array Change: </h2>
+            <br><br>
+            <input type="button" value="Change Array by Reference"  ng-click="changeArrayReference()"/><br><br>
+            <input type="button" value="Change Array by Length" ng-click="changeArrayLength()"/><br><br>
+            <input type="button" value="Change Array by Variable" ng-click="changeArrayVariable()"/><br><br>
+        </div>   
+    </body>
+</html> 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/Var_Constant_Fresh.js"></script>
+    </head>
+    <body ng-app="freshModule">
+        
+        <div ng-controller="freshController">
+            Name is: {{name}}<br><br>
+            Age is: {{age}} <br><br>
+            Address is: {{address}}<br><br>
+            Country is: {{country}}<br><br>
+            <input type="button" value="Click to change age" ng-click="changeAge()" /><br><br>
+             
+        </div><br><br>
+        -------------------------<br>
+        <fresh-directive></fresh-directive>
+        <input type="button" value="Click to change school" ng-click="changeSchool()" />
+
+    </body>
+</html>

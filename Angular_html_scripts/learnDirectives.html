@@ -3,11 +3,10 @@
     <head>
         <script src="./scripts/angular.js"></script>
         <script src="./scripts/learnDirective.js"></script>
-        <script></script>
     </head>
     <body>
         <div ng-app="learnDirective" >
-            <div ng-controller="learnDirectiveController">
+            <div ng-controller="learnDirectiveController">                
                     This is from Main controller i.e. "learnDirectiveController"
                     <br><br>
                     Name is: {{name}}
@@ -81,10 +80,23 @@
                     Place: {{place}}<br><br>
                     -----------------------------------------------
                     <br><br>
-                    <demo10-directive button-clicked="buttonClicked()"></demo10-directive>
-                    <demo10-directive button-clicked="otherButtonClicked()"></demo10-directive>
+                    "Demo 10" <br>
+                    <demo10-directive button-clicked="buttonClicked()"></demo10-directive> <br><br>
+                    <demo10-directive button-clicked="otherButtonClicked()"></demo10-directive> <br><br>
+
+                    _________________________________________________________<br><br>
+                    *********************************************************<br><br>
+                    *********************************************************<br><br>
+                    ---------------------------------------------------------<br><br>
+                    
+                    <Click here to Add button: ><br><br>
+                    <demo11-directive click-function="createButton()"></demo11-directive>
+                    <br><br>
             </div>
-            -----------------------------------------------<br><br>
+            _________________________________________________________<br><br>
+            *********************************************************<br><br>
+            *********************************************************<br><br>
+            ---------------------------------------------------------<br><br>
             ----------------xxxxxxxxxxxxxxxxxx-------------<br><br>
             <h3>Outside Parent Controller: </h3>
             "Demo 8" Directive's controller using <b>root-scope:</b><br><br>
@@ -94,10 +106,8 @@
             Name: {{name}}<br><br>
             Place: {{place}}<br><br>
             ----------------xxxxxxxxxxxxxxxxxx-------------<br><br>
-            -----------------------------------------------<br><br>
-
-            
-
+            -----------------------------------------------<br><br>         
         </div>
+        
     </body>
 </html> 

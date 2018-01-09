@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./scripts/angular.js"></script>
+        <script src="./scripts/practice.js"></script>
+    </head>
+    <body ng-app="practiceModule">
+        <h3>Create an element directive with interpolation and define scope property in link gunction</h3>
+        <div ng-controller="practiceController1">
+            <practice-directive1></practice-directive1>
+            <br><br>
+            {{message}}<br><br>
+        </div><br><br>
+        <div>--------------------------------------</div>
+        
+        <h3>Create element/attribute property to add "on click" event to the element on which it is placed</h3>
+        <span>
+            Enter your designation: <br>
+        </span>
+        <div practice-directive2 style="border: 1px solid red; padding: 10px;">
+            <input type="text" ng-model="desg"/><br><br>
+            <input type="button" value="submit" ng-click="buttonClick()"/><br><br>
+        </div><br><br>
+        <div>--------------------------------------</div><br><br>
+        <h3>Change CSS properties</h3>
+        <div practice-directive3>
+            If you click here colour will change to <b>Red</b>
+        </div><br><br>
+        <div>--------------------------------------</div><br><br>
+        <h3>Get attribute value on which it is applied</h3>
+        <div practice-directive4="Dummy" some-other="data">
+            If you click here the attribute will be displayed
+        </div><br><br>
+        <div>--------------------------------------</div><br><br>
+
+
+        <h3>Manually compile template in directive and append to an element</h3>
+        <div practice-directive5>
+        </div>
+        <br><br>
+        <div>--------------------------------------</div><br><br>
+    </body>
+</html>

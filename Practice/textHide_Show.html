@@ -1,0 +1,20 @@
+<!DOCTYPE htm>
+<html>
+    <head>
+        <script src="../Angular_html_scripts/scripts/angular.js"></script>
+        <script src="./textHide_Show.js"></script>
+    </head>
+    <body ng-app="ajaxModule">
+        <div ng-controller="ajaxController">
+            <div>
+                Enter the even data to see the star mark line <br><br>
+                <input ng-change="callFunction()" type="text" ng-model="num" /><br><br>
+            </div>
+            <div ng-show="show">
+                ***This will vanish on odd number***<br><br>
+            </div>
+            Interpolation: {{name}}  <br><br>
+            ng-bind: <span ng-bind="name"></span><br><br>
+        </div>
+    </body>
+</html>
